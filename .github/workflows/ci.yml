@@ -23,10 +23,6 @@ jobs:
         - name: Test
           run: dotnet test
 
-        # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
-        - name: Add .nojekyll file
-          run: touch release/wwwroot/.nojekyll
-
         # Generate the website
         - name: Publish
           run: dotnet publish NaziLife/NaziLife.csproj --configuration Release
@@ -34,13 +30,10 @@ jobs:
         # Publish the website
         - name: GitHub Pages action
           if: ${{ github.ref == 'refs/heads/master' }} # Publish only when the push is on master
-          uses: peaceiris/actions-gh-pages@v3.6.1
+          uses: JamesIves/github-pages-deploy-action@3.7.1
           with:
-            github_token: ${{ secrets.PUBLISH_TOKEN }}
-            publish_branch: gh-pages
-            publish_dir: bin/Release/netstandard2.1/publish/wwwroot
-            allow_empty_commit: false
-            keep_files: false
-            force_orphan: true
+            GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: NaziLife/wwwroot
             # TODO uncomment the following line if you have a custom domain name
             cname: nazi.life
