@@ -1,9 +1,12 @@
 ﻿@page "/"
-
-<PageTitle>Index</PageTitle>
-
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<PageTitle>Home</PageTitle>
+<style>
+    .bg-image {
+        background-image: url("https://live.staticflickr.com/2522/3942290389_fc70e7980d_b.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<FourteenWordsComponent></FourteenWordsComponent>
+<div class="bg-image" style="height: 85vh; margin-top: -14px; margin-right: -1.5rem; margin-left: -2rem;"></div>
