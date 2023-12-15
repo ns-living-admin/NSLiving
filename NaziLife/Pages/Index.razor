@@ -1,6 +1,6 @@
 ﻿@page "/"
-<PageTitle>Home</PageTitle>
-<style>
+<PageTitle>Index</PageTitle>
+@* <style>
     .bg-image {
         background-image: url("https://live.staticflickr.com/2522/3942290389_fc70e7980d_b.jpg");
         background-repeat: no-repeat;
@@ -9,4 +9,110 @@
     }
 </style>
 <FourteenWordsComponent></FourteenWordsComponent>
-<div class="bg-image" style="height: 85vh; margin-top: -14px; margin-right: -1.5rem; margin-left: -2rem;"></div>
+<div class="bg-image" style="height: 85vh; margin-top: -14px; margin-right: -1.5rem; margin-left: -2rem;"></div> 
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#featured">Featured</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#quotes">Quotes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#music">Music</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#photos">Photos</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#articles">Articles</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div id="featured" class="tab-pane active">
+        <div class="container">
+            <!-- Featured content here -->
+        </div>
+    </div>
+    <div id="quotes" class="tab-pane">
+        <div class="container">
+            <!-- Quotes content here -->
+        </div>
+    </div>
+    <div id="music" class="tab-pane">
+        <div class="container">
+            <!-- Music content here -->
+        </div>
+    </div>
+    <div id="photos" class="tab-pane">
+        <div class="container">
+            <!-- Photos content here -->
+        </div>
+    </div>
+    <div id="articles" class="tab-pane">
+        <div class="container">
+            <!-- Articles content here -->
+        </div>
+    </div>
+</div> *@
+
+<div class="container">
+    <FourteenWordsComponent></FourteenWordsComponent>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Featured Article</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Quote of the Day</h5>
+                    <p class="card-text">"Your quote goes here." - Author</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center mt-5">Explore More</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Music of the Week</h5>
+                    <p class="card-text">Sample text about the featured music and artist.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Photo Gallery</h5>
+                    <p class="card-text">Explore our stunning photo collection.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder Image">
+                <div class="card-body">
+                    <h5 class="card-title">Featured Article 2</h5>
+                    <p class="card-text">Another interesting article snippet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
