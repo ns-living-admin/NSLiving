@@ -130,13 +130,6 @@ html[b-ad8jv8a3oq], body[b-ad8jv8a3oq] {
     }
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
-.navbar-text[b-wxo8bialn1] {
-    font-size: 1.2rem;
-    font-family: 'Germania One';
-    font-style: italic;
-    font-weight: bolder;
-}
-
 .navbar-toggler[b-wxo8bialn1] {
     background-color: rgba(255, 255, 255, 0.1);
 }
@@ -161,8 +154,10 @@ html[b-ad8jv8a3oq], body[b-ad8jv8a3oq] {
 }
 
 .nav-item[b-wxo8bialn1] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-family: 'Germania One';
+    font-style: italic;
+    font-weight: bolder;
 }
 
     .nav-item:first-of-type[b-wxo8bialn1] {
