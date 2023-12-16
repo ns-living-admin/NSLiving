@@ -1,3 +1,5 @@
+@import '_content/Blazor.Bootstrap/Blazor.Bootstrap.bundle.scp.css';
+
 /* /Shared/FourteenWordsComponent.razor.rz.scp.css */
 .top-band[b-vdxt027i1v] {
     background-color: black;
@@ -106,7 +108,7 @@ html[b-ad8jv8a3oq], body[b-ad8jv8a3oq] {
     }
 
     .sidebar[b-ad8jv8a3oq] {
-        width: 275px;
+        width: 300px;
         height: 100vh;
         position: sticky;
         top: 0;
@@ -194,6 +196,6 @@ html[b-ad8jv8a3oq], body[b-ad8jv8a3oq] {
 
     .collapse[b-wxo8bialn1] {
         /* Never collapse the sidebar for wide screens */
-        display: block;
+        display: block !important;
     }
 }
