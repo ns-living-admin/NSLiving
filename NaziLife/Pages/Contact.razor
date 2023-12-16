@@ -1,0 +1,69 @@
+﻿@page "/contact"
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+<div style="font-family: 'Germania One'; color: #DE0000; font-size: xx-large; font-weight: bolder;"> Contact Us</div>
+<form @onsubmit="SubmitForm">
+    <div>
+        <p>
+            <label for="userName">Name:</label>
+            <input type="text" name="userName" id="userName" placeholder="Name" @bind="Name" required />
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="user@example.com" @bind="Email" required />
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="mobile">Mobile:</label>
+            <input type="tel" name="mobile" id="mobile" placeholder="555.123.4567" @bind="Mobile" />
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="subj">
+                Subject:
+                <select name="subj" @bind="Subject">
+                    <option value="Hello">Say Hello</option>
+                    <option value="Support">Support</option>
+                    <option value="Complaints">I Have a Complaint</option>
+                    <option value="Other">Other</option>
+                </select>
+            </label>
+        </p>
+    </div>
+    <label for="msg">Message:</label>
+    <div>
+        <textarea name="msg" id="msg" rows="4" cols="40" maxlength="60" required @bind="Message"></textarea>
+    </div>
+
+    <div>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+    </div>
+</form>
+
+@code {
+    string Name;
+    string Email;
+    string? Message;
+    string? Mobile;
+    string Subject = "hello";
+    private async Task SubmitForm()
+    {
+        // Construct the mailto link with form data
+        var mailtoLink = $"mailto:admin@nazi.life?subject={Subject}&body=Name:%0A{Name}%0AEmail:%0A{Email}%0AMobile:%0A{Mobile}%0AMessage:%0A{Message}";
+
+
+        NavigationManager.NavigateTo(mailtoLink);
+        await JSRuntime.InvokeVoidAsync("alert", "Success!");
+        Name = null;
+        Email = null;
+        Message = null;
+        Mobile = null;
+        Subject = null;
+    }
+}
